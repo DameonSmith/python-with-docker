@@ -1,4 +1,4 @@
 flask
-redis
+flask_redis
 gunicorn
 requests
