@@ -14,14 +14,6 @@ class ThingsResource(object):
         self.logger = logging.getLogger('starts-with.' + __name__);
         self.logger.setLevel(logging.INFO)
 
-    def on_get(self, req, resp):
-        """Handles GET requests"""
-        resp.status = falcon.HTTP_200  # This is the default status
-        resp.body = ('\nTwo things awe me most, the starry sky '
-                     'above me and the moral law within me.\n'
-                     '\n'
-                     '    ~ Immanuel Kant\n\n')
-
     def on_post(self, req, resp):
         reqj = json.loads(req.stream.read().decode('utf-8'))
         try:
